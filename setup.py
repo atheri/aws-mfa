@@ -1,7 +1,7 @@
-from setuptools import setup
-
 from codecs import open
 from os import path
+
+from setuptools import setup
 
 here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
@@ -9,13 +9,11 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='aws-mfa',
-    version='0.0.12',
+    version='0.0.13',
     description='Manage AWS MFA Security Credentials',
     long_description=long_description,
     long_description_content_type='text/markdown',
     license='MIT',
-    author='Brian Nuszkowski',
-    author_email='brian@bnuz.co',
     packages=['awsmfa'],
     scripts=['aws-mfa'],
     entry_points={
@@ -24,5 +22,5 @@ setup(
         ],
     },
     url='https://github.com/broamski/aws-mfa',
-    install_requires=['boto3']
+    install_requires=['boto3', 'botocore']
 )
